@@ -2,12 +2,6 @@ import yt_dlp
 
 url = "https://www.youtube.com/watch?v=jNQXAC9IVRw"
 
-ydl_opts = {
-    "format": "bestaudio/best",
-    "outtmpl": "audio/test.%(ext)s"
-}
-
-with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-    ydl.download([url])
-
-print("Downloaded successfully!")
+with yt_dlp.YoutubeDL({}) as ydl:
+    info = ydl.extract_info(url, download=False)
+    print(info["title"])
