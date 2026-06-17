@@ -1,0 +1,17 @@
+venv/
+__pycache__/
+*.pyc
+
+audio/*
+!audio/.gitkeep
+
+transcripts/*
+!transcripts/.gitkeep
+
+chunks/*
+!chunks/.gitkeep
+
+summaries/*
+!summaries/.gitkeep
+
+.env
